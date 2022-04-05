@@ -19,6 +19,7 @@ public class Dice {
 
     public static int rollTheDice() {
         Random random = new Random();
-        return random.nextInt(6) + 1;
+        return random.nextInt(7);
     }
+
 }

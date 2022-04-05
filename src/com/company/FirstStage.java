@@ -9,10 +9,6 @@ public class FirstStage {
         System.out.println("----- Start game -----");
         System.out.println("Predict amount of points from 2..12: ");
         int inputNumber = scanner.nextInt();
-        while(inputNumber < 2 || inputNumber > 12) {
-            System.out.println("Number should be between 2..12 try again...");
-            inputNumber = scanner.nextInt();
-        }
         System.out.println("User rolls the dice...");
         int a = Dice.rollTheDice();
         int b = Dice.rollTheDice();
