@@ -49,20 +49,27 @@ public class ThirdStage {
             System.out.println("------- ROUND " + i + " -------- Current Score -------");
             System.out.println("User: " + userPoints);
             System.out.println("Computer: " + cpuPoints);
+
             if (userPoints > cpuPoints) {
                 System.out.println("User win with " + (userPoints - cpuPoints) + " points more");
-                userList.add(inputNumber); userList.add(a+b); userList.add(userPoints);
-                cpuList.add(randomNumber); cpuList.add(c+d); cpuList.add(cpuPoints);
+                userList.add(inputNumber);
+                userList.add(a+b);
+                userList.add(userPoints);
+
+                cpuList.add(randomNumber);
+                cpuList.add(c+d);
+                cpuList.add(cpuPoints);
             }
             if (cpuPoints > userPoints) {
                 System.out.println("Computer win with " + (cpuPoints - userPoints) + " points more");
-                userList.add(0,inputNumber); userList.add(1,a+b); userList.add(2,userPoints);
-                cpuList.add(0,randomNumber); cpuList.add(1,c+d); cpuList.add(2,cpuPoints);
-            }
-            if (cpuPoints == userPoints) {
-                System.out.println("The result is same!");
-                userList.add(0,inputNumber); userList.add(1,a+b); userList.add(2,userPoints);
-                cpuList.add(0,randomNumber); cpuList.add(1,c+d); cpuList.add(2,cpuPoints);
+                cpuList.add(randomNumber);
+                cpuList.add(c+d);
+                cpuList.add(cpuPoints);
+
+                userList.add(inputNumber);
+                userList.add(a+b);
+                userList.add(userPoints);
+
             }
 
             System.out.println("-------------------------------------------");
@@ -73,12 +80,15 @@ public class ThirdStage {
         System.out.println("------- Finish Game -------");
         System.out.println();
         System.out.println(" ROUND |           User |      Computer ");
+
         int counter = 0;
         for(int k = 0; k < 3; k++) {
             System.out.println("-------+----------------+----------------");
                 System.out.println("       | Predicted:  " + userList.get(counter) + "  | Predicted:  " + cpuList.get(counter));
-                System.out.println(" - " + (k+1) + " - | Dice:       " + userList.get(counter+1) + "  | Dice:       " + cpuList.get(counter+1));
-                System.out.println("       | Result:     " + userList.get(counter+2) + "  | Dice:       " + cpuList.get(counter+2));
+                counter++;
+                System.out.println(" - " + (k+1) + " - | Dice:       " + userList.get(counter) + "  | Dice:       " + cpuList.get(counter));
+                counter++;
+                System.out.println("       | Result:     " + userList.get(counter) + "  | Result:     " + cpuList.get(counter));
                 counter++;
             }
 
@@ -96,15 +106,6 @@ public class ThirdStage {
             System.out.println("Computer win with " + (cpuSum - userSum) + " points more. Congratulations!");
         if (userSum == cpuSum)
             System.out.println("The result is same!");
-
-
-
-
-
-
-
-
-
 
 
     }
