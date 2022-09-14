@@ -54,7 +54,7 @@ public class FourthStage {
                 }
             }
 
-            int chance2 = random.nextInt(1,4);
+            int chance2 = random.nextInt(1,5);
 
             if(inputCheat == 1 && i == 2) {
                 System.out.println("User rolls the dices...");
@@ -103,9 +103,9 @@ public class FourthStage {
             }
 
 
-            if(inputCheat == 2 && i ==1 ||
-                    inputCheat == 2 && i ==2 ||
-                    inputCheat == 2 && i ==3) {
+            if(inputCheat == 2 && i == 1 ||
+                    inputCheat == 2 && i == 2 ||
+                    inputCheat == 2 && i == 3) {
                 Dice.printDice(a);
                 Dice.printDice(b);
                 int sum1 = (a + b);
@@ -238,7 +238,7 @@ public class FourthStage {
 
         int userSum = userList.stream().mapToInt(Integer::intValue).sum();
         int cpuSum = cpuList.stream().mapToInt(Integer::intValue).sum();
-        System.out.println(" Total | Points:     " + userSum + " | Computer:   " + cpuSum);
+        System.out.println(" Total | User:      " + userSum + " | Computer:   " + cpuSum);
 
         System.out.println();
 
